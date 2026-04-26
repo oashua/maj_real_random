@@ -1,0 +1,11 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: #1a5c2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans', sans-serif;
+  overflow: hidden;
+  color: #f5f0e0;
+}
