@@ -1,1 +1,146 @@
-/* 日麻牌面样式 */
+/* 日麻牌面样式 - 传统风格 */
+.tile {
+  width: 40px;
+  height: 56px;
+  background: #f5f0e0;
+  border: 2px solid #333;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: default;
+  position: relative;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  user-select: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.tile.interactive {
+  cursor: pointer;
+}
+
+.tile.interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 2px 4px 6px rgba(0,0,0,0.3);
+}
+
+.tile.selected {
+  transform: translateY(-8px);
+  border-color: #e74c3c;
+  box-shadow: 0 4px 8px rgba(231,76,60,0.4);
+}
+
+.tile-man .tile-rank {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #222;
+}
+
+.tile-man .tile-suit-label {
+  font-size: 12px;
+  color: #c0392b;
+  position: absolute;
+  bottom: 6px;
+}
+
+.tile-pin .dots {
+  display: grid;
+  gap: 2px;
+  padding: 4px;
+}
+
+.tile-pin .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2c3e50;
+}
+
+.tile-pin .dot.red {
+  background: #e74c3c;
+}
+
+.tile-sou .bamboo {
+  font-size: 14px;
+  color: #27ae60;
+}
+
+.tile-sou .bamboo.red {
+  color: #e74c3c;
+}
+
+.tile-z .tile-char {
+  font-family: serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.tile-z-east .tile-char { color: #222; }
+.tile-z-south .tile-char { color: #222; }
+.tile-z-west .tile-char { color: #222; }
+.tile-z-north .tile-char { color: #222; }
+.tile-z-haku .tile-char { color: #999; font-size: 14px; border: 1px solid #ccc; padding: 2px; }
+.tile-z-hatsu .tile-char { color: #27ae60; }
+.tile-z-chun .tile-char { color: #e74c3c; }
+
+.tile.aka .tile-rank,
+.tile.aka .tile-char {
+  color: #e74c3c !important;
+}
+
+.tile-back {
+  width: 40px;
+  height: 56px;
+  background: #2c5f8a;
+  border: 2px solid #1a3a5c;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.tile-back .pattern {
+  width: 28px;
+  height: 40px;
+  background: repeating-linear-gradient(
+    45deg,
+    #3a7ab5,
+    #3a7ab5 2px,
+    #2c5f8a 2px,
+    #2c5f8a 6px
+  );
+  border: 1px solid #4a8ac5;
+  border-radius: 2px;
+}
+
+.tile.sideways {
+  transform: rotate(90deg);
+}
+
+.tile.small {
+  width: 28px;
+  height: 38px;
+  font-size: 12px;
+}
+
+.tile.small .tile-rank {
+  font-size: 14px;
+}
+
+.tile.small .tile-suit-label {
+  font-size: 9px;
+  bottom: 3px;
+}
+
+.tile-back.small {
+  width: 28px;
+  height: 38px;
+}
+
+.tile-back .pattern.small {
+  width: 20px;
+  height: 28px;
+}

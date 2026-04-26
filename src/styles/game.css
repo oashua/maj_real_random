@@ -9,3 +9,126 @@
   overflow: hidden;
   color: #f5f0e0;
 }
+
+.game-board {
+  width: 800px;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f5f0e0;
+}
+
+.game-center .wall-count {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.game-center .dora-area {
+  margin-top: 10px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.game-center .round-info {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.player-area {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-area.south {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.player-area.north {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.player-area.east {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.player-area.west {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.player-hand {
+  display: flex;
+  gap: 2px;
+  margin: 4px 0;
+}
+
+.player-hand.sideways {
+  flex-direction: column;
+}
+
+.discards-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  max-width: 200px;
+  padding: 4px;
+}
+
+.discards-area.sideways {
+  flex-direction: column;
+  max-height: 200px;
+  max-width: none;
+}
+
+.player-name {
+  color: #f5f0e0;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.player-name .riichi-badge {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.player-points {
+  color: #f5f0e0;
+  font-size: 11px;
+}
+
+.calls-area {
+  display: flex;
+  gap: 4px;
+  margin: 2px 0;
+}
+
+.call-group {
+  display: flex;
+  gap: 1px;
+}
+
+.scoreboard {
+  background: rgba(0,0,0,0.5);
+  border-radius: 8px;
+  padding: 12px;
+  color: #f5f0e0;
+}

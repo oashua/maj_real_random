@@ -149,10 +149,13 @@ export function advanceRound(game, dealerWon) {
   const nextNumber = ri.number + 1;
   let nextWind = ri.wind;
 
+  let finalNumber = nextNumber;
+  let finalWind = nextWind;
+
   if (nextNumber > 4) {
     if (ri.wind === '東') {
-      nextWind = '南';
-      nextNumber = 1;
+      finalWind = '南';
+      finalNumber = 1;
     } else {
       return { ...game, phase: 'end' };
     }
@@ -161,8 +164,8 @@ export function advanceRound(game, dealerWon) {
   return {
     ...game,
     roundInfo: {
-      wind: nextWind,
-      number: nextNumber,
+      wind: finalWind,
+      number: finalNumber,
       honba: 0,
       riichiSticks: 0,
     },
